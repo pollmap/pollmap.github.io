@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Verify static files exist
+        run: |
+          test -f index.html || { echo "index.html missing"; exit 1; }
+          test -f style.css || { echo "style.css missing"; exit 1; }
+          test -f projects.json || { echo "projects.json missing"; exit 1; }
+
+      - name: Validate projects.json
+        run: |
+          python3 -c "import json; d = json.load(open('projects.json', encoding='utf-8')); assert 'projects' in d, 'missing projects key'; assert len(d['projects']) > 0, 'projects empty'; print(f'OK: {len(d[\"projects\"])} projects loaded')"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

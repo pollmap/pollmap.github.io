@@ -1,0 +1,107 @@
+{
+  "$schema": "./projects.schema.json",
+  "updated": "2026-04-24",
+  "projects": [
+    {
+      "name": "nexus-finance-mcp",
+      "title": "NEXUS Finance MCP",
+      "description": "398-tool Finance & Research Intelligence Platform — Korean macro, global markets, crypto/DeFi, quant engines, PhD math & alternative data via MCP.",
+      "url": "https://github.com/pollmap/nexus-finance-mcp",
+      "language": "Python",
+      "tags": ["mcp", "quant", "public", "flagship"],
+      "featured": true
+    },
+    {
+      "name": "luxon-terminal",
+      "title": "Luxon Terminal",
+      "description": "AI quant hedge fund backtester — QuantPipeline, KIS brokerage API, 6-module risk engine, backtesting & trade execution.",
+      "url": "https://github.com/pollmap/luxon-terminal",
+      "language": "Python",
+      "tags": ["quant", "backtester", "public"],
+      "featured": true
+    },
+    {
+      "name": "cufa-equity-report",
+      "title": "CUFA Equity Report",
+      "description": "AI-based auto equity research report generator (HTML + XLSX) for 충북대학교 가치투자학회.",
+      "url": "https://github.com/pollmap/cufa-equity-report",
+      "language": "Python",
+      "tags": ["equity", "fastmcp", "public"],
+      "featured": true
+    },
+    {
+      "name": "equity-research-book",
+      "title": "한국 시장 실전 기업분석",
+      "description": "현장과 AI로 다시 쓰는 가치투자 — 학부생이 쓴 실전 기업분석 매뉴얼. 본편 8주차 + 부록 A-H, 24만자. CC BY-NC-ND 4.0.",
+      "url": "https://github.com/pollmap/equity-research-book",
+      "language": "docx",
+      "tags": ["book", "equity", "public", "flagship"],
+      "featured": true
+    },
+    {
+      "name": "luxon-blog",
+      "title": "Luxon Devlog",
+      "description": "매주 1~2편 Devlog — Building / Field / Failure / Deep Dive / Retro 5 카테고리. 214 posts and growing.",
+      "url": "https://github.com/pollmap/luxon-blog",
+      "language": "Astro",
+      "tags": ["devlog", "public"],
+      "featured": true
+    },
+    {
+      "name": "margin",
+      "title": "Margin (CUFA wiki v2)",
+      "description": "현장 리서치 + AI 구조화 한국어 금융 레퍼런스. Next.js 15 + 272 MDX + 12 계산기 + 194 금융기관 디렉토리.",
+      "url": "https://github.com/pollmap/margin",
+      "language": "TypeScript",
+      "tags": ["wiki", "cufa", "public"]
+    },
+    {
+      "name": "Sophia-Atlas",
+      "title": "Sophia Atlas",
+      "description": "인류 지성의 인드라망 — Interactive 3D platform · 1,019 thinkers · 8,500+ connections · philosophy, religion, science & history.",
+      "url": "https://github.com/pollmap/Sophia-Atlas",
+      "language": "TypeScript",
+      "tags": ["3d", "philosophy", "public"]
+    },
+    {
+      "name": "career-ops-kr",
+      "title": "Career Ops KR",
+      "description": "한국 금융/핀테크/블록체인 구직 자동화 파이프라인 — 27 channels, 449 green tests, 194 financial institutions.",
+      "url": "https://github.com/pollmap/career-ops-kr",
+      "language": "Python",
+      "tags": ["career", "scraping", "public"]
+    },
+    {
+      "name": "luxon-sangkwon-mcp",
+      "title": "Luxon Sangkwon MCP",
+      "description": "한국 상권 인텔리전스 MCP 서버 — AI 에이전트용 상권분석 인프라 (8 tools, 250만 점포, SQLite+R-tree).",
+      "url": "https://github.com/pollmap/luxon-sangkwon-mcp",
+      "language": "Python",
+      "tags": ["mcp", "geo", "public"]
+    },
+    {
+      "name": "CUFA-wiki",
+      "title": "CUFA Wiki (v1, legacy)",
+      "description": "한국 금융 교육 위키 — 4-layer 투자분석 체계, DCF/WACC 등 15종 계산기, 170+ 금융사 디렉토리, 취업 가이드.",
+      "url": "https://github.com/pollmap/CUFA-wiki",
+      "language": "Docusaurus",
+      "tags": ["wiki", "cufa", "public"]
+    },
+    {
+      "name": "CUFA-WEB",
+      "title": "CUFA Website",
+      "description": "충북대학교 가치투자학회 공식 웹사이트 — value investing club at CBNU.",
+      "url": "https://github.com/pollmap/CUFA-WEB",
+      "language": "TypeScript",
+      "tags": ["cufa", "public"]
+    },
+    {
+      "name": "pollmap",
+      "title": "GitHub Profile",
+      "description": "Chan-hee Lee · Luxon AI Founder · CUFA President · 396-tool MCP ecosystem.",
+      "url": "https://github.com/pollmap/pollmap",
+      "language": "Markdown",
+      "tags": ["profile", "public"]
+    }
+  ]
+}

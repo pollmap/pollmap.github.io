@@ -1,0 +1,51 @@
+# Dependencies (not used here, but guard against accidental npm i)
+node_modules/
+.pnpm-store/
+.bun/
+
+# Build outputs
+dist/
+_site/
+.cache/
+.vite/
+.astro/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+*~
+
+# Editor
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.sublime-workspace
+
+# Secrets — NEVER COMMIT
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*_rsa
+*_ed25519
+secrets.json
+credentials.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.bak
+
+# GitHub Pages build artifacts
+.github/pages-cache/
