@@ -1,60 +1,94 @@
 # pollmap.github.io
 
-> 이찬희 (Chan-hee Lee) — Luxon AI Founder · CUFA 2대 회장 · 충북대 경영 학부생.
-> 이 저장소는 `https://pollmap.github.io/` 루트 도메인을 서빙하는 **개인 포트폴리오 허브**다.
+> 이찬희 (Chan-hee Lee) · 충북대 경영 24학번 · KDA 4기 (2026.5.7~8.21)
+> Financial Data & Research Automation Portfolio
+> 28.6 졸업 · 단일 채널 빌드로그
 
-## 무엇인가
+`https://pollmap.github.io/` — 면접관이 단일 URL 하나로 5분 내 정체성·궤도·관제 전부 열람 가능한 포트폴리오 허브.
 
-2028년 졸업 공채까지의 5년 공개 빌드로그 포트폴리오. 면접관이 **단일 URL 하나로 15분** 안에 전부 열람 가능하도록 설계된 3단 funnel:
+## 디자인 톤
 
-1. **관문 (이 페이지)** — 누구인가 / 뭘 만드는가 / 어디로 갈까 (15초 훑기)
-2. **발행 엔진** — [`/luxon-blog/`](https://pollmap.github.io/luxon-blog/) 매주 1~2편 Devlog
-3. **완성품** — [`/equity-research-book/`](https://pollmap.github.io/equity-research-book/) 『한국 시장 실전 기업분석』 (24만자)
-4. **쇼케이스** — 19+ GitHub repo 카드 인덱스 (projects.json)
+**ODYSSEY BEYOND** — Kubrick 2001: A Space Odyssey × Palantir Foundry 기하학.
+
+| 레이어 | 적용 |
+|---|---|
+| 색조 | `--void` `#000` · `--starlight` `#f5f5f5` · `--orbital` `#1565c0` · `--hal` `#ff0000` |
+| 폰트 | Orbitron (display) · Pretendard Variable (sans) · JetBrains Mono (mono) |
+| 후처리 | `filter: contrast(1.04) saturate(0.85)` — ENR 은잔류 (silver-retention) |
+| 모션 | starfield 3-layer drift (480/720/600s) · station 회전 360s · sun-line 90s · glacial-fade 4-8s |
+| 인터랙션 | airlock CTA — 8s seal pressurization on hover |
+
+세부 모티프: HAL 9000 mark (4s 펄스), one-point perspective, conic-gradient station spokes, CSS-only 우주.
+
+## 4-Section 구조
+
+| 섹션 | 제목 | 콘텐츠 |
+|---|---|---|
+| §01 | **DESTINATIONS** | Featured 5 — `nexus-finance-mcp` · `cufa-equity-report` · `equity-research-book` · `luxon-terminal` · `career-ops-kr` |
+| §02 | **THE VESSEL** | 6 채널 — Equity Reports · ETF Products · Devlog · Licenses · Trade Journal · Field Notes |
+| §03 | **TRAINING** | KDA 4기 16주 3 phases — 데이터 분석 풀스택 (568h) |
+| §04 | **MISSION CONTROL** | Operator profile + Telemetry (현재 보유 자산·자격증·궤도) |
 
 ## 기술 스택
 
-의도적으로 최소 스택 유지:
+의도적 미니멀:
 
-- **HTML5 + CSS + vanilla JS** (빌드 툴 없음)
+- **HTML5 + CSS (embedded)** · 빌드 툴 없음
 - **GitHub Pages** static hosting
-- **projects.json** — 레포 카드 데이터 분리
+- **projects.json** — 레포 카드 데이터 분리 (12 repos 인덱스)
 - **GitHub Actions** — push → deploy 자동화
+- **fonts**: jsdelivr Pretendard · Google Orbitron + JetBrains Mono
 
 ## 로컬 개발
 
 ```bash
-# 어떤 정적 서버든 사용 가능
 python3 -m http.server 8000
-# 또는
-npx http-server .
+# http://localhost:8000/
 ```
 
-브라우저에서 `http://localhost:8000/`.
+## 디렉토리
 
-## 프로젝트 카드 추가
-
-`projects.json`의 `projects[]` 배열에 객체 한 개 추가:
-
-```json
-{
-  "name": "repo-slug",
-  "title": "표시 제목",
-  "description": "한 줄 설명",
-  "url": "https://github.com/pollmap/repo-slug",
-  "language": "Python",
-  "tags": ["tag1", "tag2"],
-  "featured": false
-}
+```
+pollmap.github.io/
+├── index.html              # Kubrick v2 단일 페이지 (41KB, CSS embedded)
+├── projects.json           # 12 레포 카드 인덱스
+├── style.css               # legacy (sub-route용 보존)
+├── archive/                # 이전 버전 보관
+│   ├── index_v1_pre_kubrick.html
+│   └── style_v1_pre_kubrick.css
+├── LICENSE                 # MIT
+├── SECURITY.md             # 보안 신고 정책
+├── CONTRIBUTING.md         # 기여 가이드
+└── .gitignore
 ```
 
-커밋 → push → GitHub Actions가 자동 배포.
+## 보안 5종 세트
+
+- `LICENSE` (MIT)
+- `README.md` (이 파일)
+- `.gitignore`
+- `SECURITY.md`
+- `CONTRIBUTING.md`
+
+웹 5헤더 (GitHub Pages 기본 + `_headers` 보강 예정):
+- `X-Frame-Options: DENY`
+- `X-Content-Type-Options: nosniff`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+- `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload`
+
+## Sub-Route
+
+| 경로 | 레포 | 용도 |
+|---|---|---|
+| `/luxon-blog/` | `pollmap/luxon-blog` | Astro Devlog (매주 1~2편) |
+| `/equity-research-book/` | `pollmap/equity-research-book` | 24만자 기업분석 매뉴얼 |
+| `/margin/` | `pollmap/margin` | CUFA wiki v2 (Next.js 15 + 272 MDX) |
 
 ## 라이선스
 
-- **소스 코드** (HTML/CSS/JS/YAML): MIT
-- **본인 이력·프로젝트 설명 텍스트**: CC BY 4.0 (attribution appreciated)
-- **링크된 외부 콘텐츠** (블로그 포스트, 교재, 기타 repo): 각 대상의 개별 라이선스 적용
+이 저장소: **MIT** — 자유 사용 가능.
+서브 콘텐츠는 각 레포 라이선스 따름 (예: equity-research-book = CC BY-NC-ND 4.0).
 
 ## 연결
 
@@ -65,4 +99,4 @@ npx http-server .
 
 ---
 
-*Built solo. Deployed from GitHub Actions. Updated roughly weekly.*
+*Built solo. Deployed from GitHub Actions. Updated weekly.*
