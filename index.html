@@ -6,8 +6,14 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="이찬희 (Chan-hee Lee). 충북대 경영 24, 28.6 졸업. Financial Data & Research Automation Portfolio. 산단 254곳 답사, 24만자 단독 저서, MCP 398도구, KDA 568h." />
   <meta property="og:title" content="POLLMAP // 燦憙 ODYSSEY" />
-  <meta property="og:description" content="An odyssey of Financial Data, Research Automation, and the human in between." />
+  <meta property="og:description" content="이찬희. 금융 데이터/AI · WM/PB · 리서치 자동화. 28.6 졸업 단일 채널 빌드로그." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pollmap.github.io/" />
+  <meta property="og:image" content="https://pollmap.github.io/og-default.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="POLLMAP // 燦憙 ODYSSEY" />
+  <meta name="twitter:description" content="금융 데이터/AI · WM/PB · 리서치 자동화 · 28.6 졸업 단일 채널" />
+  <meta name="twitter:image" content="https://pollmap.github.io/og-default.svg" />
   <title>POLLMAP // 燦憙 ODYSSEY · ODYSSEY OF FINANCIAL DATA</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -195,6 +201,78 @@
     .meta-row .v{color:var(--starlight)}
     .meta-row .v.live{color:var(--green)}
 
+    /* Main position band */
+    .position-band{
+      padding:18px 20px;border:1px solid var(--orbital);
+      background:linear-gradient(135deg,rgba(21,101,192,0.08) 0%,rgba(245,245,245,0.012) 100%);
+      display:flex;flex-direction:column;gap:6px;margin-top:8px}
+    .pb-overline{font-family:var(--font-mono);font-size:var(--fs-mono-xs);
+      letter-spacing:0.18em;color:var(--orbital-bright);text-transform:uppercase;font-weight:500}
+    .pb-title{font-family:var(--font-display);font-weight:600;
+      font-size:clamp(20px,4vw,32px);color:var(--starlight);letter-spacing:-0.005em;
+      line-height:1.2}
+    .pb-sep{color:var(--grey-deep);font-weight:300;margin:0 8px}
+    .pb-meta{font-family:var(--font-sans);font-size:13.5px;
+      color:var(--starlight-dim);line-height:1.5}
+
+    /* Universe — target companies */
+    .universe{display:flex;flex-direction:column;gap:24px}
+    .uni-tier{padding:20px;border:1px solid var(--line);background:var(--hull)}
+    .uni-tier-head{display:flex;justify-content:space-between;align-items:baseline;
+      margin-bottom:14px;flex-wrap:wrap;gap:6px}
+    .uni-tier-name{font-family:var(--font-display);font-weight:500;
+      font-size:18px;color:var(--starlight);letter-spacing:0.01em}
+    .uni-tier-name .badge{display:inline-block;margin-left:10px;
+      padding:2px 8px;font-family:var(--font-mono);font-size:var(--fs-mono-xs);
+      letter-spacing:0.1em;border:1px solid var(--orbital-bright);
+      color:var(--orbital-bright)}
+    .uni-tier-meta{font-family:var(--font-mono);font-size:var(--fs-mono-xs);
+      color:var(--grey-deep);letter-spacing:0.1em;text-transform:uppercase}
+    .uni-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+      background:var(--line);border:1px solid var(--line)}
+    .uni-cell{background:var(--void);padding:10px 12px;
+      display:flex;flex-direction:column;gap:3px}
+    .uni-cell-name{font-family:var(--font-mono);font-size:13px;
+      color:var(--starlight);font-weight:500;letter-spacing:0.02em}
+    .uni-cell-class{font-family:var(--font-mono);font-size:var(--fs-mono-xs);
+      color:var(--grey-deep);letter-spacing:0.08em;text-transform:uppercase}
+    .uni-tier.b-hedge{border-left:3px solid var(--amber)}
+    .uni-tier.october{border-left:3px solid var(--green)}
+
+    /* Track Record */
+    .track-list{list-style:none;display:flex;flex-direction:column;
+      border:1px solid var(--line)}
+    .track-list li{display:grid;grid-template-columns:1fr auto auto;
+      align-items:center;gap:12px;padding:11px 14px;
+      border-bottom:1px solid var(--line);
+      font-family:var(--font-mono);font-size:var(--fs-mono);letter-spacing:0.02em}
+    .track-list li:last-child{border-bottom:0}
+    .track-name{color:var(--starlight)}
+    .track-result{font-weight:500;text-align:right;min-width:70px}
+    .track-result.win{color:var(--green)}
+    .track-result.loss{color:var(--hal)}
+    .track-rule{color:var(--grey-deep);text-align:right;font-size:var(--fs-mono-xs);
+      letter-spacing:0.08em;text-transform:uppercase}
+
+    /* Roadmap timeline */
+    .roadmap{display:grid;grid-template-columns:1fr;gap:var(--gap-card)}
+    .road-phase{padding:20px;border:1px solid var(--line);background:var(--hull);
+      display:flex;flex-direction:column;gap:12px;position:relative}
+    .road-phase::before{content:'';position:absolute;left:0;top:0;
+      width:3px;height:100%;background:var(--orbital-bright);opacity:0.5}
+    .road-phase.active::before{opacity:1;background:var(--green)}
+    .road-id{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px}
+    .road-num{font-family:var(--font-mono);font-size:var(--fs-mono-sm);
+      color:var(--orbital-bright);letter-spacing:0.12em}
+    .road-time{font-family:var(--font-mono);font-size:var(--fs-mono-xs);
+      color:var(--grey-deep);letter-spacing:0.1em}
+    .road-name{font-family:var(--font-display);font-weight:500;
+      font-size:18px;color:var(--starlight);letter-spacing:-0.005em}
+    .road-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+    .road-list li{display:flex;gap:8px;font-size:13px;
+      color:var(--starlight-dim);line-height:1.5}
+    .road-list li::before{content:'─';color:var(--grey-deep);flex-shrink:0}
+
     /* STATS */
     .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;
       background:var(--line);margin:32px 0 0;border:1px solid var(--line)}
@@ -351,6 +429,8 @@
       .vessel{grid-template-columns:1fr 1fr}
       .mc-data{grid-template-columns:repeat(3,1fr)}
       .footer-links{grid-template-columns:1fr 1fr 1fr}
+      .uni-grid{grid-template-columns:repeat(2,1fr)}
+      .roadmap{grid-template-columns:repeat(2,1fr)}
     }
     @media (min-width: 1024px) {
       :root{--gap-card:16px}
@@ -367,10 +447,13 @@
       .footer-links{grid-template-columns:repeat(3,1fr)}
       .hero-meta{grid-template-columns:repeat(3,1fr);gap:28px}
       .meta-row{flex-direction:column;align-items:flex-start;gap:4px}
+      .uni-grid{grid-template-columns:repeat(3,1fr)}
+      .roadmap{grid-template-columns:repeat(4,1fr)}
     }
     @media (min-width: 1440px) {
       .destinations{grid-template-columns:repeat(3,1fr)}
       .mc-data{grid-template-columns:repeat(3,1fr)}
+      .uni-grid{grid-template-columns:repeat(4,1fr)}
     }
     @media (prefers-reduced-motion: reduce) {
       *,*::before,*::after{animation-duration:0.01ms!important;
@@ -403,7 +486,9 @@
         <a href="#destinations">§01 Destinations</a>
         <a href="#vessel">§02 Vessel</a>
         <a href="#training">§03 Training</a>
-        <a href="#mission">§04 Mission</a>
+        <a href="#universe">§04 Universe</a>
+        <a href="#mission">§05 Mission</a>
+        <a href="#roadmap">§06 Roadmap</a>
       </div>
       <div class="nav-status" aria-live="polite">
         <span class="dot" aria-hidden="true"></span>
@@ -417,7 +502,9 @@
       <a href="#destinations" role="menuitem">§ 01 — DESTINATIONS<span class="nm-meta">FIVE FEATURED REPOS</span></a>
       <a href="#vessel" role="menuitem">§ 02 — THE VESSEL<span class="nm-meta">SIX BLOG CHANNELS</span></a>
       <a href="#training" role="menuitem">§ 03 — TRAINING<span class="nm-meta">KDA 16 WEEKS · 568H</span></a>
-      <a href="#mission" role="menuitem">§ 04 — MISSION CONTROL<span class="nm-meta">OPERATOR + TELEMETRY</span></a>
+      <a href="#universe" role="menuitem">§ 04 — TARGET UNIVERSE<span class="nm-meta">11 CORE + 3 HEDGE COMPANIES</span></a>
+      <a href="#mission" role="menuitem">§ 05 — MISSION CONTROL<span class="nm-meta">OPERATOR + TRACK + LICENSE</span></a>
+      <a href="#roadmap" role="menuitem">§ 06 — ROADMAP<span class="nm-meta">2026 → 2028 4-PHASE</span></a>
       <a href="https://github.com/pollmap" role="menuitem" target="_blank" rel="noopener">GitHub<span class="nm-meta">@pollmap · 15 PUBLIC NODES</span></a>
     </div>
   </nav>
@@ -442,6 +529,12 @@
         산단 <strong>254곳 답사</strong>, <strong>24만자 단독 저서</strong>, MCP <strong>398도구</strong>, KDA <strong>568시간</strong>.
         매크로 사이클의 전환점에서 비대칭 기회를 찾고, 데이터·AI로 자동화한다.
       </p>
+
+      <div class="position-band" role="region" aria-label="Main Position">
+        <div class="pb-overline">MAIN POSITION</div>
+        <div class="pb-title">금융 데이터/AI <span class="pb-sep">·</span> WM/PB <span class="pb-sep">·</span> 리서치 자동화</div>
+        <div class="pb-meta">채용자가 15분 안에 "금융 데이터·리서치·WM 연결자"로 인식하게.</div>
+      </div>
 
       <div class="hero-cta">
         <a href="#destinations" class="cta cta-primary">
@@ -662,9 +755,72 @@
       </div>
     </section>
 
+    <section class="section" id="universe" aria-labelledby="uni-title">
+      <div class="sec-head">
+        <div class="sec-overline"><span class="num">§ 04</span><span>TARGET UNIVERSE · COMPANY MAP</span></div>
+        <h2 class="sec-title" id="uni-title">Eleven <em>core</em>, three <em>hedge</em>.</h2>
+        <div class="sec-meta">집중 관리 본진 11 + B+ 햇지 3 + 27.10 풀베팅 11 (별개 풀)</div>
+      </div>
+      <div class="universe">
+
+        <div class="uni-tier">
+          <div class="uni-tier-head">
+            <div class="uni-tier-name">A · Core 11<span class="badge">집중 관리</span></div>
+            <div class="uni-tier-meta">28.6 졸업 직전 풀베팅 타겟</div>
+          </div>
+          <div class="uni-grid">
+            <div class="uni-cell"><span class="uni-cell-name">키움증권</span><span class="uni-cell-class">증권 디지털/데이터</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">미래에셋증권</span><span class="uni-cell-class">증권 디지털/데이터</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">한국투자증권</span><span class="uni-cell-class">증권 디지털/데이터</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">메리츠증권</span><span class="uni-cell-class">증권 디지털/데이터</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">KDB산업은행</span><span class="uni-cell-class">정책금융</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">KEXIM 수출입은행</span><span class="uni-cell-class">정책금융</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">KCB 코리아크레딧뷰로</span><span class="uni-cell-class">신용평가</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">한국거래소 KRX</span><span class="uni-cell-class">시장 인프라</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">한국예탁결제원 KSD</span><span class="uni-cell-class">시장 인프라</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">코스콤</span><span class="uni-cell-class">시장 인프라</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">NICE평가정보</span><span class="uni-cell-class">신용평가</span></div>
+          </div>
+        </div>
+
+        <div class="uni-tier b-hedge">
+          <div class="uni-tier-head">
+            <div class="uni-tier-name">B+ · Hedge 3<span class="badge" style="border-color:var(--amber);color:var(--amber);">햇지</span></div>
+            <div class="uni-tier-meta">단기 진입 가능 · 메시지 분산 회피</div>
+          </div>
+          <div class="uni-grid">
+            <div class="uni-cell"><span class="uni-cell-name">카드 (KB·현대)</span><span class="uni-cell-class">데이터·CRM·리스크</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">인터넷은행 (토스·카뱅)</span><span class="uni-cell-class">핀테크 데이터</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">VASP / 디지털자산</span><span class="uni-cell-class">27.X 규제 변동성</span></div>
+          </div>
+        </div>
+
+        <div class="uni-tier october">
+          <div class="uni-tier-head">
+            <div class="uni-tier-name">2027.10 · 풀베팅 11<span class="badge" style="border-color:var(--green);color:var(--green);">초기 신청</span></div>
+            <div class="uni-tier-meta">졸업 8개월 전 본격 채용 시즌</div>
+          </div>
+          <div class="uni-grid">
+            <div class="uni-cell"><span class="uni-cell-name">IBK기업은행</span><span class="uni-cell-class">정책금융 · 답사 254</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">KODIT 신용보증기금</span><span class="uni-cell-class">정책금융 심사</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">KIBO 기술보증기금</span><span class="uni-cell-class">기술 신용평가</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">HF 한국주택금융공사</span><span class="uni-cell-class">정책금융</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">KRX 한국거래소</span><span class="uni-cell-class">시장 인프라 · 지역인재</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">토스 (Viva Republics)</span><span class="uni-cell-class">데이터 분석가</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">카카오페이</span><span class="uni-cell-class">데이터 · 결제 도메인</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">KB국민카드</span><span class="uni-cell-class">데이터 · CRM</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">현대카드</span><span class="uni-cell-class">데이터 · UX 분석</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">현대캐피탈</span><span class="uni-cell-class">AI Agent Engineer</span></div>
+            <div class="uni-cell"><span class="uni-cell-name">한화생명</span><span class="uni-cell-class">디지털 전환 · 데이터</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section class="section" id="mission" aria-labelledby="mc-title">
       <div class="sec-head">
-        <div class="sec-overline"><span class="num">§ 04</span><span>MISSION CONTROL · TELEMETRY</span></div>
+        <div class="sec-overline"><span class="num">§ 05</span><span>MISSION CONTROL · TELEMETRY</span></div>
         <h2 class="sec-title" id="mc-title">The <em>operator</em>.</h2>
         <div class="sec-meta">현재 보유 자산 · 자격증 · 궤도</div>
       </div>
@@ -714,6 +870,73 @@
             <div class="mc-data-cell"><span class="mc-data-k">EMAIL</span><span class="mc-data-v">contact@pollmap.dev</span></div>
             <div class="mc-data-cell"><span class="mc-data-k">GITHUB</span><span class="mc-data-v">@pollmap</span></div>
           </div>
+        </div>
+
+        <div class="mc-block" style="grid-column:1/-1;">
+          <div class="mc-block-head">
+            <div class="mc-block-title">Track Record · manifesto v1 검증</div>
+            <div class="mc-block-id">MC-03</div>
+          </div>
+          <ul class="track-list">
+            <li><span class="track-name">DOGE 150원 → 600원</span><span class="track-result win">+300%</span><span class="track-rule">Concentration</span></li>
+            <li><span class="track-name">Mitsui E&amp;S</span><span class="track-result win">+100%</span><span class="track-rule">Macro · Industry Cycle</span></li>
+            <li><span class="track-name">우리기술</span><span class="track-result win">+50%</span><span class="track-rule">Macro · Industry</span></li>
+            <li><span class="track-name">Palantir</span><span class="track-result win">+30%</span><span class="track-rule">Pyramiding</span></li>
+            <li><span class="track-name">Amazon</span><span class="track-result loss">-30%</span><span class="track-rule">Tight Stop</span></li>
+          </ul>
+          <p style="font-size:13px;color:var(--starlight-dim);line-height:1.6;">
+            <strong style="color:var(--starlight);">면접 활용 포인트.</strong>
+            가치투자 프레임 사용했지만, 실전은 매크로 사이클 기반의 비대칭 베팅에서 강점이 있었다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap" aria-labelledby="rm-title">
+      <div class="sec-head">
+        <div class="sec-overline"><span class="num">§ 06</span><span>ROADMAP · 2026 → 2028 EXECUTION</span></div>
+        <h2 class="sec-title" id="rm-title">Four <em>phases</em> to liftoff.</h2>
+        <div class="sec-meta">KDA → Portfolio → Message → Hire · 28.6 졸업까지 26개월</div>
+      </div>
+      <div class="roadmap">
+        <div class="road-phase active" id="rmp1">
+          <div class="road-id"><span class="road-num">P-01</span><span class="road-time">2026 H1 · NOW</span></div>
+          <div class="road-name">KDA · 기본기 구축</div>
+          <ul class="road-list">
+            <li>KDA 4기 568h 수료</li>
+            <li>SQLD ✅ · ADsP · 투운사</li>
+            <li>팀프로젝트 + 개인 사이트 MVP</li>
+          </ul>
+        </div>
+        <div class="road-phase" id="rmp2">
+          <div class="road-id"><span class="road-num">P-02</span><span class="road-time">2026 H2</span></div>
+          <div class="road-name">Portfolio · 정비</div>
+          <ul class="road-list">
+            <li>GitHub 5 레포 정리</li>
+            <li>투자일지 5건 작성</li>
+            <li>리서치 보고서 업데이트</li>
+            <li>이력서 초안</li>
+          </ul>
+        </div>
+        <div class="road-phase" id="rmp3">
+          <div class="road-id"><span class="road-num">P-03</span><span class="road-time">2027</span></div>
+          <div class="road-name">Message · 강화</div>
+          <ul class="road-list">
+            <li>직무별 자기소개</li>
+            <li>면접 답변 30문항</li>
+            <li>27.10 풀베팅 11개 응시</li>
+            <li>본진 11개 관리 시트</li>
+          </ul>
+        </div>
+        <div class="road-phase" id="rmp4">
+          <div class="road-id"><span class="road-num">P-04</span><span class="road-time">2028 H1 · LIFTOFF</span></div>
+          <div class="road-name">Hire · 실행</div>
+          <ul class="road-list">
+            <li>본진 11 본격 지원</li>
+            <li>면접 · 과제전형 대응</li>
+            <li>최종 포지셔닝 확정</li>
+            <li>2028.06.15 졸업</li>
+          </ul>
         </div>
       </div>
     </section>
