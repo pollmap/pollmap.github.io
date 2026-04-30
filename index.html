@@ -465,6 +465,18 @@
       .nav,.nav-mobile,.starfield,.station,body::after{display:none}
       body{color:#000;background:#fff;filter:none}
     }
+    /* v3.2 — mobile micro-fix: tap latency + tap target size (Apple HIG 44px) */
+    a,button,[role="button"],input,textarea,select{
+      -webkit-tap-highlight-color:transparent;
+      touch-action:manipulation;
+    }
+    @media (hover:none) and (pointer:coarse){
+      .nav a,.nav-mobile a,.cta,.btn,.dest-card,.scenario-tag{
+        min-height:44px;
+        display:inline-flex;
+        align-items:center;
+      }
+    }
   </style>
 </head>
 <body>
